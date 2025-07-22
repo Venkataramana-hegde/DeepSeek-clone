@@ -9,7 +9,7 @@ const ChatWindow = () => {
           <img src={LOGO_ICON} alt="deepseek logo" className="h-15 w-15" />
           <p className="text-2xl font-bold">Hi, I'm DeepSeek.</p>
         </div>
-        <p className="font-light">How can I help you today?</p>
+        <p className=" pb-2 font-xs">How can I help you today?</p>
         <ChatInput />
       </div>
       
