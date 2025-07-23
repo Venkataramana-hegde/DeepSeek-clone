@@ -14,12 +14,15 @@ const ChatInput = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#414045" }} className="rounded-3xl">
+    <div
+      style={{ backgroundColor: "#414045" }}
+      className="w-full max-w-2xl mx-auto rounded-3xl overflow-hidden"
+    >
       <textarea
         value={value}
         onInput={handleInput}
         placeholder="Message DeepSeek"
-        className="w-190 bg-transparent resize-none p-4 text-white placeholder:text-gray-400 outline-none max-h-48"
+        className="w-full bg-transparent resize-none p-4 text-white placeholder:text-gray-400 outline-none max-h-48"
         rows={1}
       />
       <div className="flex items-center justify-between mx-2 pb-2">
@@ -35,7 +38,7 @@ const ChatInput = () => {
         </div>
         <div className="flex gap-3">
           <button className="flex gap-1 items-center justify-center cursor-pointer">
-            <img src={PIN_ICON} alt="pin icon" className="h-6 w-6"/>
+            <img src={PIN_ICON} alt="pin icon" className="h-6 w-6" />
           </button>
           <button className="flex gap-1 items-center justify-center cursor-pointer bg-gray-400 rounded-full p-2">
             <img src={ARROW_DULL_ICON} alt="send icon" />

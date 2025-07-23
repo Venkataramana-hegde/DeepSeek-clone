@@ -8,6 +8,7 @@ import QRCODE from "../assets/qrcode.png";
 import LOGO_TEXT from "../assets/logo_text.svg";
 import CHAT_ICON from "../assets/chat_icon.svg";
 import NEW_ICON from "../assets/new_icon.svg";
+// import MENU_ICON from "../assets/menu_icon.svg";
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -16,10 +17,23 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`h-screen transition-all duration-300 bg-[#222327] flex flex-col justify-between ${
-        isOpen ? "w-64" : "w-16"
-      }`}
+      className={`h-screen transition-all duration-300 bg-[#222327] flex flex-col justify-between
+    ${isOpen ? "w-64" : "w-16"}
+    ${isOpen ? "fixed md:relative left-0 z-40" : "md:relative"}
+  `}
     >
+      {/* Hamburger Menu */}
+      {/* <div className="md:hidden absolute top-4 left-4 z-50">
+        {!isOpen && (
+          <img
+            src={MENU_ICON}
+            alt="menu icon"
+            className="h-6 w-6 cursor-pointer"
+            onClick={() => setIsOpen(true)}
+          />
+        )}
+      </div> */}
+
       {isOpen ? (
         <div>
           <div className="flex items-center justify-between pt-5 px-3 ml-2">
@@ -57,7 +71,11 @@ const Sidebar = () => {
       {/* BOTTOM ICONS */}
       <div className="relative flex flex-col items-center gap-8 mb-5">
         {isHovering && (
-          <div className={`fixed bottom-28 bg-black rounded shadow-lg z-[9999] border border-gray-600 ${isOpen ? 'left-5' : 'left-1'}`}>
+          <div
+            className={`fixed bottom-28 bg-black rounded shadow-lg z-[9999] border border-gray-600 ${
+              isOpen ? "left-5" : "left-1"
+            }`}
+          >
             <img
               src={QRCODE}
               alt="qr code"
