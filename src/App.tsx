@@ -1,6 +1,5 @@
 import ChatWindow from "./components/ChatWindow";
 import Sidebar from "./components/Sidebar";
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
 
 const App = () => {
